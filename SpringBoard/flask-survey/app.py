@@ -7,9 +7,6 @@ from surveys import satisfaction_survey as survey
 
 app = Flask(__name__)
 
-# key names will use to store some things in the session;
-# put here as constants so we're guaranteed to be consistent in
-# our spelling of these
 RESPONSES_KEY = "responses"
 
 
@@ -21,7 +18,7 @@ debug = DebugToolbarExtension(app)
 
 @app.route("/")
 def show_survey_start():
-    """Select a survey."""
+    
 
     return render_template("survey_start.html", survey=survey)
 
